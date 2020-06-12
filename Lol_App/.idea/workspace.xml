@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ae8fe897-7602-4be8-8aa5-73e77e42f651" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="CodeStyleSettingsInfer">
+    <option name="done" value="true" />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true" converted="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties converted="true" />
+    <breakpoint_rules converted="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectCodeStyleSettingsMigration">
+    <option name="version" value="1" />
+  </component>
+  <component name="ProjectId" id="1bUQLxSNSd3PnvvCXiVfo8ifn55" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.SHOW" value="true" />
+    <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.SHOW" value="false" />
+    <property name="findjar.last.used.dir" value="$PROJECT_DIR$/src/main/java/Lol/View" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/Lol/View" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.16015625" />
+    <property name="project.structure.side.proportion" value="0.26309663" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="experimental" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Faculta\FIS\Lol_App\src\main\java\Lol" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Faculta\FIS\Lol_App\src\main\resources" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.LogInView">
+    <configuration name="CustomerServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lol.services.CustomerServices" />
+      <module name="Lol_App" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lol.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LogInView" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lol.View.LogInView" />
+      <module name="Lol_App" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lol.View.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lol.Main" />
+      <module name="Lol_App" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lol.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ModeratorServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lol.services.ModeratorServices" />
+      <module name="Lol_App" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lol.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParticipantServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lol.services.ParticipantServices" />
+      <module name="Lol_App" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lol.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TournamentServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lol.services.TournamentServices" />
+      <module name="Lol_App" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lol.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.ModeratorServices" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ParticipantServices" />
+        <item itemvalue="Application.TournamentServices" />
+        <item itemvalue="Application.CustomerServices" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ae8fe897-7602-4be8-8aa5-73e77e42f651" name="Default Changelist" comment="" />
+      <created>1588684141606</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1588684141606</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Added demo Swing class and gitignore file">
+      <created>1588684592872</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1588684592872</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added new packages and some empty classes">
+      <created>1588685221498</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1588685221498</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Implement a start graphic interface for register">
+      <created>1588686484070</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1588686484070</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Added new buttons for register and implement the verify of the password for moderator">
+      <created>1589197739726</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1589197739726</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Implement register for Customer and Moderator">
+      <created>1589198830900</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1589198830900</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Added LogInView class and implements graphic interface for login">
+      <created>1589207913522</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1589207913522</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Implement Verify Password for LogIn and display login error">
+      <created>1589465955284</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1589465955284</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Added difference between log in as a moderator and log in as a customer">
+      <created>1589531330018</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1589531330018</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Choosing phase done">
+      <created>1589802910914</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1589802910914</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Added a new button and a new future, now after the customer will choose the role, rank and what role want his partner to be he will receive a window with the name and the rank of the possible partners">
+      <created>1589893186500</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1589893186500</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added annoucement, player online and tournament buttons">
+      <created>1589893779254</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1589893779254</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Added Add,delete and see tournament buttons and now the Moderator can add a tournament">
+      <created>1589907492032</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1589907492032</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Moderator can see what tournaments are on now">
+      <created>1589982396811</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1589982396811</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Customer can now see what tournaments are on">
+      <created>1589987543911</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1589987543911</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Added demo Swing class and gitignore file" />
+    <MESSAGE value="Added new packages and some empty classes" />
+    <MESSAGE value="Implement a start graphic interface for register" />
+    <MESSAGE value="Added new buttons for register and implement the verify of the password for moderator" />
+    <MESSAGE value="Implement register for Customer and Moderator" />
+    <MESSAGE value="Added LogInView class and implements graphic interface for login" />
+    <MESSAGE value="Implement Verify Password for LogIn and display login error" />
+    <MESSAGE value="Added graphic interface for Choose Phase and now the customer can choose the criteria he want" />
+    <MESSAGE value="Added difference between log in as a moderator and log in as a customer" />
+    <MESSAGE value="Choosing phase done" />
+    <MESSAGE value="Added a new button and a new future, now after the customer will choose the role, rank and what role want his partner to be he will receive a window with the name and the rank of the possible partners" />
+    <MESSAGE value="Added annoucement, player online and tournament buttons" />
+    <MESSAGE value="Added Add,delete and see tournament buttons and now the Moderator can add a tournament" />
+    <MESSAGE value="Moderator can see what tournaments are on now" />
+    <MESSAGE value="Customer can now see what tournaments are on" />
+    <option name="LAST_COMMIT_MESSAGE" value="Customer can now see what tournaments are on" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="620" y="104" key="#HTTP_Proxy" timestamp="1589458981722">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="620" y="104" key="#HTTP_Proxy/0.0.1536.824@0.0.1536.824" timestamp="1589458981722" />
+    <state x="495" y="131" key="#LogInView" timestamp="1589203345506">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="495" y="131" key="#LogInView/0.0.1536.824@0.0.1536.824" timestamp="1589203345506" />
+    <state x="282" y="104" key="#Notifications" timestamp="1589466122587">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="282" y="104" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1589466122587" />
+    <state x="361" y="74" key="#Project_Structure" timestamp="1590384521722">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="74" key="#Project_Structure/0.0.1536.824@0.0.1536.824" timestamp="1590384521722" />
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser" timestamp="1591947918829">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="122" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1591947918829" />
+    <state x="845" y="345" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1588684947576">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="845" y="345" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824@0.0.1536.824" timestamp="1588684947576" />
+    <state x="389" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1588685963825">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="389" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1588685963825" />
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1590150323232">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1590150323232" />
+    <state x="520" y="272" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1588694230504">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="520" y="272" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1588694230504" />
+    <state x="138" y="82" width="1291" height="693" key="CommitChangelistDialog2" timestamp="1590152371163">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="138" y="82" width="1291" height="693" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590152371163" />
+    <state x="147" y="65" key="DiffContextDialog" timestamp="1588684544267">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="147" y="65" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1588684544267" />
+    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1589459180939">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589459180939" />
+    <state width="932" height="117" key="GridCell.Tab.0.bottom" timestamp="1591951606514">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="932" height="117" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591951606514" />
+    <state width="932" height="117" key="GridCell.Tab.0.center" timestamp="1591951606514">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="932" height="117" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591951606514" />
+    <state width="932" height="117" key="GridCell.Tab.0.left" timestamp="1591951606514">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="932" height="117" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591951606514" />
+    <state width="932" height="117" key="GridCell.Tab.0.right" timestamp="1591951606514">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="932" height="117" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591951606514" />
+    <state x="435" y="76" key="Maven.ArtifactSearchDialog" timestamp="1589458957027">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="435" y="76" key="Maven.ArtifactSearchDialog/0.0.1536.824@0.0.1536.824" timestamp="1589458957027" />
+    <state x="154" y="0" key="SettingsEditor" timestamp="1590384614424">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="154" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1590384614424" />
+    <state x="586" y="333" key="VCS.EditChangelistDialog" timestamp="1589207970561">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="586" y="333" key="VCS.EditChangelistDialog/0.0.1536.824@0.0.1536.824" timestamp="1589207970561" />
+    <state x="6" y="160" key="Vcs.Push.Dialog.v2" timestamp="1590396894389">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="6" y="160" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1590396894389" />
+    <state x="323" y="163" key="caller.chooser.dialog" timestamp="1590152432692">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="323" y="163" key="caller.chooser.dialog/0.0.1536.824@0.0.1536.824" timestamp="1590152432692" />
+    <state x="494" y="113" width="986" height="624" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog" timestamp="1590385729626">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="494" y="113" width="986" height="624" key="com.intellij.history.integration.ui.views.DirectoryHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1590385729626" />
+    <state x="124" y="78" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1590385729626">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="124" y="78" width="1350" height="638" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1590385729626" />
+    <state x="146" y="91" width="1350" height="638" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog" timestamp="1590385406188">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="146" y="91" width="1350" height="638" key="com.intellij.history.integration.ui.views.SelectionHistoryDialog/0.0.1536.824@0.0.1536.824" timestamp="1590385406188" />
+    <state x="403" y="314" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1589459182602">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="403" y="314" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1536.824@0.0.1536.824" timestamp="1589459182602" />
+    <state x="794" y="193" key="run.anything.popup" timestamp="1589991711181">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="794" y="193" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1589991711181" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1591887864822">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1591887864822" />
+  </component>
+</project>
