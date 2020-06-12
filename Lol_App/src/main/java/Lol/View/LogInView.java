@@ -1,6 +1,7 @@
 package Lol.View;
 
 import Lol.Customer.customer;
+import Lol.Participant.participant;
 import Lol.Tournaments.Tournament;
 import Lol.annoucements.annoucement;
 import Lol.controllers.LogInController;
@@ -33,6 +34,8 @@ public class LogInView extends JFrame {
     private static java.util.List<customer> users;
     private static final Path USERS_PATH = FileSystemService.getPathToFile("config", "customers.json");
 
+    private static List<participant> tour_part;
+    private static final Path participant_path = FileSystemService.getPathToFile("config", "participanti_tournament.json");
 
     private static List<annoucement> ann;
     private static final Path Annouce_Path = FileSystemService.getPathToFile("congif","annoucements.json");
@@ -40,6 +43,17 @@ public class LogInView extends JFrame {
     private static List<Tournament> tour;
     private static final Path USERS_PATH2 = FileSystemService.getPathToFile("config", "tournament.json");
 
+    public static void loadParticipants() throws IOException {
+
+        if (!Files.exists(participant_path)) {
+            FileUtils.copyURLToFile(CustomerServices.class.getClassLoader().getResource("participanti_tournament.json"), participant_path.toFile());
+        }
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        tour_part = objectMapper.readValue(participant_path.toFile(), new TypeReference<List<participant>>() {
+        });
+    }
     public static void loadUsersFromFile() throws IOException {
 
         if (!Files.exists(USERS_PATH)) {
@@ -490,7 +504,7 @@ public class LogInView extends JFrame {
                                                   c_show_players.gridx = 0;
                                                   c_show_players.gridy = 0;
                                                   pan_see_players.add(name_tour,c_show_players);
-                                                  JTextField txt_tournament = new JTextField(10);
+                                                  final JTextField txt_tournament = new JTextField(10);
                                                   c_show_players.gridx = 1;
                                                   pan_see_players.add(txt_tournament,c_show_players);
                                                   JButton list = new JButton("List");
@@ -500,6 +514,47 @@ public class LogInView extends JFrame {
                                                   pan_see_players.add(back_see_players,c_show_players);
                                                   c_show_players.gridx = 1;
                                                   pan_see_players.add(list,c_show_players);
+                                                  list.addActionListener(new ActionListener() {
+                                                      @Override
+                                                      public void actionPerformed(ActionEvent actionEvent) {
+                                                          frame_see_players.show(false);
+                                                          final JFrame frame_list = new JFrame();
+                                                          frame_list.setVisible(true);
+                                                          frame_list.setSize(500,500);
+                                                          JPanel panel_list = new JPanel(new GridBagLayout());
+                                                          frame_list.getContentPane().add(panel_list, BorderLayout.NORTH);
+                                                          GridBagConstraints c_list = new GridBagConstraints();
+                                                          c_list.gridx = 0;
+                                                          c_list.gridy = 0;
+                                                          c_list.insets = new Insets(10,10,10,10);
+
+                                                          String name_tournament = txt_tournament.getText();
+                                                          try {
+                                                              loadParticipants();
+                                                          } catch (IOException e) {
+                                                              e.printStackTrace();
+                                                          }
+                                                          for(participant p:tour_part)
+                                                          {
+                                                              if(Objects.equals(name_tournament,p.getTournament_name()))
+                                                              {
+                                                                JLabel listare = new JLabel(p.getUsername());
+                                                                panel_list.add(listare,c_list);
+                                                                c_list.gridy++;
+                                                              }
+
+                                                          }
+                                                          JButton back_list = new JButton("Back");
+                                                          panel_list.add(back_list,c_list);
+                                                          back_list.addActionListener(new ActionListener() {
+                                                              @Override
+                                                              public void actionPerformed(ActionEvent actionEvent) {
+                                                                  frame_list.show(false);
+                                                                  frame_see_players.show(true);
+                                                              }
+                                                          });
+                                                      }
+                                                  });
                                                   back_see_players.addActionListener(new ActionListener() {
                                                       @Override
                                                       public void actionPerformed(ActionEvent actionEvent) {
