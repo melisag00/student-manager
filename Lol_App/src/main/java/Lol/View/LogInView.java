@@ -466,11 +466,48 @@ public class LogInView extends JFrame {
                                           JButton back_show = new JButton("Back");
                                           c_show.gridx = 0;
                                           pan_show.add(back_show,c_show);
+                                          JButton see_players = new JButton("See participants");
+                                          c_show.gridx = 1;
+                                          pan_show.add(see_players,c_show);
                                           back_show.addActionListener(new ActionListener() {
                                               @Override
                                               public void actionPerformed(ActionEvent actionEvent) {
                                                   frame_tour.show(false);
                                                   frame1.show(true);
+                                              }
+                                          });
+                                          see_players.addActionListener(new ActionListener() {
+                                              @Override
+                                              public void actionPerformed(ActionEvent actionEvent) {
+                                                  frame_tour.show(false);
+                                                  final JFrame frame_see_players = new JFrame();
+                                                  frame_see_players.setVisible(true);
+                                                  frame_see_players.setSize(500,500);
+                                                  JPanel pan_see_players = new JPanel(new GridBagLayout());
+                                                  frame_see_players.getContentPane().add(pan_see_players, BorderLayout.NORTH);
+                                                  GridBagConstraints c_show_players = new GridBagConstraints();
+                                                  JLabel name_tour = new JLabel("Tournament name:");
+                                                  c_show_players.gridx = 0;
+                                                  c_show_players.gridy = 0;
+                                                  pan_see_players.add(name_tour,c_show_players);
+                                                  JTextField txt_tournament = new JTextField(10);
+                                                  c_show_players.gridx = 1;
+                                                  pan_see_players.add(txt_tournament,c_show_players);
+                                                  JButton list = new JButton("List");
+                                                  JButton back_see_players = new JButton("Back");
+                                                  c_show_players.gridx = 0;
+                                                  c_show_players.gridy = 1;
+                                                  pan_see_players.add(back_see_players,c_show_players);
+                                                  c_show_players.gridx = 1;
+                                                  pan_see_players.add(list,c_show_players);
+                                                  back_see_players.addActionListener(new ActionListener() {
+                                                      @Override
+                                                      public void actionPerformed(ActionEvent actionEvent) {
+                                                          frame_tour.show(true);
+                                                          frame_see_players.show(false);
+                                                      }
+                                                  });
+
                                               }
                                           });
                                       }
