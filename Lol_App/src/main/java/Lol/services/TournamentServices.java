@@ -9,6 +9,7 @@ import org.apache.commons.io.FileUtils;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -43,14 +44,20 @@ public class TournamentServices {
     }
    public static void delete(String name) throws IOException {
        loadUsersFromFile();
+       List<Tournament> tour_delete = new ArrayList<Tournament>();
        for(Tournament t:tour)
        {
-           if(Objects.equals(name,t.getName()))
-               tour.remove(t.getName());
+           if(!Objects.equals(t.getName(),name))
+           {
+               tour_delete.add(new Tournament(t.getName(),t.getDate()));
+           }
        }
-       System.out.println(tour);
+       try {
+           ObjectMapper objectMapper = new ObjectMapper();
+           objectMapper.writerWithDefaultPrettyPrinter().writeValue(USERS_PATH.toFile(), tour_delete);
+       } catch (IOException e) {
+           throw new CouldNotWriteTournamentException();
+       }
+
    }
-
-
-
 }

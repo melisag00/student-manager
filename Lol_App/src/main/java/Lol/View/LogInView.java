@@ -439,6 +439,55 @@ public class LogInView extends JFrame {
 
                                           }
                                       });
+                                      delete.addActionListener(new ActionListener() {
+                                          @Override
+                                          public void actionPerformed(ActionEvent actionEvent) {
+                                              frame1.show(false);
+                                              final JFrame frame_delete = new JFrame();
+                                              frame_delete.setVisible(true);
+                                              frame_delete.setSize(500,500);
+                                              JPanel panel_delete = new JPanel(new GridBagLayout());
+                                              frame_delete.getContentPane().add(panel_delete, BorderLayout.NORTH);
+                                              GridBagConstraints c_delete = new GridBagConstraints();
+                                              c_delete.gridx = 0;
+                                              c_delete.gridy = 0;
+                                              JLabel name_tournament = new JLabel("Tournament name:");
+                                              panel_delete.add(name_tournament,c_delete);
+                                              c_delete.gridx = 1;
+                                              final JTextField txt_tournament = new JTextField(10);
+                                              panel_delete.add(txt_tournament,c_delete);
+                                              JButton back_delete = new JButton("Back");
+                                              c_delete.gridx = 0;
+                                              c_delete.gridy = 1;
+                                              panel_delete.add(back_delete,c_delete);
+                                              JButton delete = new JButton("Delete");
+                                              c_delete.gridx = 1;
+                                              panel_delete.add(delete,c_delete);
+                                              back_delete.addActionListener(new ActionListener() {
+                                                  @Override
+                                                  public void actionPerformed(ActionEvent actionEvent) {
+                                                      frame_delete.show(false);
+                                                      frame1.show(true);
+                                                  }
+                                              });
+                                              delete.addActionListener(new ActionListener() {
+                                                  @Override
+                                                  public void actionPerformed(ActionEvent actionEvent) {
+                                                      String name_to_delete = txt_tournament.getText();
+                                                      try {
+                                                          if(controller2.deleteTournament(name_to_delete))
+                                                          {
+                                                              JOptionPane.showMessageDialog(null, "You delete the tournament with succes", "Delete", JOptionPane.INFORMATION_MESSAGE);
+
+                                                          }
+                                                      } catch (IOException e) {
+                                                          e.printStackTrace();
+                                                      }
+                                                  }
+                                              });
+
+                                          }
+                                      });
                                   tournam.addActionListener(new ActionListener() {
                                       @Override
                                       public void actionPerformed(ActionEvent actionEvent) {

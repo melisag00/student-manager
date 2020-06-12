@@ -21,4 +21,9 @@ public class TournamentController{
         }
     }
 
+    public boolean deleteTournament(String name) throws IOException {
+        TournamentServices.delete(name);
+        return true;
+    }
+
 }
