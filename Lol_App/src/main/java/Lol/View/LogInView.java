@@ -253,7 +253,7 @@ public class LogInView extends JFrame {
                                                frame_see_ann.setVisible(true);
                                                frame_see_ann.setSize(500,500);
                                                JPanel pan_show_ann = new JPanel(new GridBagLayout());
-                                               frame_see_ann.getContentPane().add(pan_show_ann, BorderLayout.WEST);
+                                               frame_see_ann.getContentPane().add(pan_show_ann, BorderLayout.NORTH);
                                                GridBagConstraints c_show_ann = new GridBagConstraints();
                                                c_show_ann.gridx = 0;
                                                c_show_ann.gridy = 0;
@@ -261,10 +261,20 @@ public class LogInView extends JFrame {
                                                for(annoucement annouce:ann)
                                                {
                                                    c_show_ann.gridx = 0;
+
                                                    JLabel annoucem = new JLabel(annouce.getAnnouce());
                                                    pan_show_ann.add(annoucem,c_show_ann);
                                                    c_show_ann.gridy++;
                                                }
+                                               JButton back_see_ann = new JButton("Back");
+                                               pan_show_ann.add(back_see_ann,c_show_ann);
+                                               back_see_ann.addActionListener(new ActionListener() {
+                                                   @Override
+                                                   public void actionPerformed(ActionEvent actionEvent) {
+                                                       frame_see_ann.show(false);
+                                                       frame_annouce.show(true);
+                                                   }
+                                               });
                                            }
                                        });
                                        add_annouce.addActionListener(new ActionListener() {

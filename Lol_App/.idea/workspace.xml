@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ae8fe897-7602-4be8-8aa5-73e77e42f651" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lol/View/LogInView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lol/View/LogInView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -342,7 +346,8 @@
     <MESSAGE value="Added Add,delete and see tournament buttons and now the Moderator can add a tournament" />
     <MESSAGE value="Moderator can see what tournaments are on now" />
     <MESSAGE value="Customer can now see what tournaments are on" />
-    <option name="LAST_COMMIT_MESSAGE" value="Customer can now see what tournaments are on" />
+    <MESSAGE value="Customers can see the numbers of accounts created, can add an annoucement and see the annoucements" />
+    <option name="LAST_COMMIT_MESSAGE" value="Customers can see the numbers of accounts created, can add an annoucement and see the annoucements" />
   </component>
   <component name="WindowStateProjectService">
     <state x="620" y="104" key="#HTTP_Proxy" timestamp="1589458981722">
@@ -381,34 +386,34 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="520" y="272" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1588694230504" />
-    <state x="138" y="82" width="1291" height="693" key="CommitChangelistDialog2" timestamp="1590152371163">
+    <state x="149" y="15" width="1291" height="693" key="CommitChangelistDialog2" timestamp="1591951689039">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="138" y="82" width="1291" height="693" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1590152371163" />
-    <state x="147" y="65" key="DiffContextDialog" timestamp="1588684544267">
+    <state x="149" y="15" width="1291" height="693" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1591951689039" />
+    <state x="147" y="65" key="DiffContextDialog" timestamp="1591951636030">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="147" y="65" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1588684544267" />
+    <state x="147" y="65" key="DiffContextDialog/0.0.1536.824@0.0.1536.824" timestamp="1591951636030" />
     <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1589459180939">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589459180939" />
-    <state width="932" height="117" key="GridCell.Tab.0.bottom" timestamp="1591951606514">
+    <state width="1493" height="119" key="GridCell.Tab.0.bottom" timestamp="1591965093062">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="932" height="117" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591951606514" />
-    <state width="932" height="117" key="GridCell.Tab.0.center" timestamp="1591951606514">
+    <state width="1493" height="119" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1591965093062" />
+    <state width="1493" height="119" key="GridCell.Tab.0.center" timestamp="1591965093062">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="932" height="117" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591951606514" />
-    <state width="932" height="117" key="GridCell.Tab.0.left" timestamp="1591951606514">
+    <state width="1493" height="119" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1591965093062" />
+    <state width="1493" height="119" key="GridCell.Tab.0.left" timestamp="1591965093061">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="932" height="117" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591951606514" />
-    <state width="932" height="117" key="GridCell.Tab.0.right" timestamp="1591951606514">
+    <state width="1493" height="119" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1591965093061" />
+    <state width="1493" height="119" key="GridCell.Tab.0.right" timestamp="1591965093062">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="932" height="117" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591951606514" />
+    <state width="1493" height="119" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1591965093062" />
     <state x="435" y="76" key="Maven.ArtifactSearchDialog" timestamp="1589458957027">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
