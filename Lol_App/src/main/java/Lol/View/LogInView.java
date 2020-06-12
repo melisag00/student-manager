@@ -464,8 +464,7 @@ public class LogInView extends JFrame {
                                               c_show.gridy++;
                                           }
                                           JButton back_show = new JButton("Back");
-                                          c_show.gridx = -1;
-                                          c_show.gridy++;
+                                          c_show.gridx = 0;
                                           pan_show.add(back_show,c_show);
                                           back_show.addActionListener(new ActionListener() {
                                               @Override
@@ -590,6 +589,53 @@ public class LogInView extends JFrame {
         c_show.gridy++;
         JButton tourny = new JButton("Tournaments");
         pan_show.add(tourny,c_show);
+        c_show.gridx = 1;
+        JButton see_annoucements = new JButton("See annoucements");
+        pan_show.add(see_annoucements,c_show);
+        see_annoucements.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                frame1.show(false);
+                try {
+                    loadAnnoucementsFromFile();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                ObjectMapper objectMapper = new ObjectMapper();
+                try {
+                    ann = objectMapper.readValue(Annouce_Path.toFile(), new TypeReference<List<annoucement>>() {
+                    });
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                final JFrame frame_see_ann = new JFrame("See annoucements");
+                frame_see_ann.setVisible(true);
+                frame_see_ann.setSize(500,500);
+                JPanel pan_show_ann = new JPanel(new GridBagLayout());
+                frame_see_ann.getContentPane().add(pan_show_ann, BorderLayout.NORTH);
+                GridBagConstraints c_show_ann = new GridBagConstraints();
+                c_show_ann.gridx = 0;
+                c_show_ann.gridy = 0;
+                c_show_ann.insets = new Insets(10,10,10,10);
+                for(annoucement annouce:ann)
+                {
+                    c_show_ann.gridx = 0;
+
+                    JLabel annoucem = new JLabel(annouce.getAnnouce());
+                    pan_show_ann.add(annoucem,c_show_ann);
+                    c_show_ann.gridy++;
+                }
+                JButton back_see_ann = new JButton("Back");
+                pan_show_ann.add(back_see_ann,c_show_ann);
+                back_see_ann.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent actionEvent) {
+                        frame_see_ann.show(false);
+                        frame1.show(true);
+                    }
+                });
+            }
+        });
         tourny.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
