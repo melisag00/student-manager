@@ -149,7 +149,7 @@ public class ModeratorServices {
     }
 
     public static void main(String[] args) throws IOException {
-        loadAnnoucementsFromFile();
-        System.out.println(ann);
+        loadUsersFromFile();
+        System.out.println(users);
     }
 }

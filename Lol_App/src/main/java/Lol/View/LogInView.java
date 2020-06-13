@@ -32,7 +32,7 @@ public class LogInView extends JFrame {
     private JTextField txtuser;
     private JPasswordField ps;
     private static java.util.List<customer> users;
-    private static final Path USERS_PATH = FileSystemService.getPathToFile("config", "customers.json");
+    private static final Path USERS_PATH = FileSystemService.getPathToFile("config", "partner.json");
 
     private static List<participant> tour_part;
     private static final Path participant_path = FileSystemService.getPathToFile("config", "participanti_tournament.json");
@@ -57,7 +57,7 @@ public class LogInView extends JFrame {
     public static void loadUsersFromFile() throws IOException {
 
         if (!Files.exists(USERS_PATH)) {
-            FileUtils.copyURLToFile(CustomerServices.class.getClassLoader().getResource("customers.json"), USERS_PATH.toFile());
+            FileUtils.copyURLToFile(CustomerServices.class.getClassLoader().getResource("partner.json"), USERS_PATH.toFile());
         }
 
         ObjectMapper objectMapper = new ObjectMapper();
