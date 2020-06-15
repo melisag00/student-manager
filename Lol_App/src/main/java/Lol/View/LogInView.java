@@ -1,6 +1,7 @@
 package Lol.View;
 
 import Lol.Customer.customer;
+import Lol.Messages.messages;
 import Lol.Participant.participant;
 import Lol.Tournaments.Tournament;
 import Lol.Tournaments.Tournament_details;
@@ -9,10 +10,7 @@ import Lol.controllers.LogInController;
 import Lol.controllers.MessagesController;
 import Lol.controllers.ParticipantController;
 import Lol.controllers.TournamentController;
-import Lol.services.CustomerServices;
-import Lol.services.FileSystemService;
-import Lol.services.ModeratorServices;
-import Lol.services.ParticipantServices;
+import Lol.services.*;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.FileUtils;
@@ -49,6 +47,9 @@ public class LogInView extends JFrame {
 
     private static List<Tournament_details> tour_det;
     private static final Path Tour_det_path = FileSystemService.getPathToFile("config","try_details.json");
+
+    private static List<messages> mess_1;
+    private static final Path Message_Path = FileSystemService.getPathToFile("congif","messages.json");
 
     public static void loadDetailsFromFile() throws IOException {
 
@@ -106,6 +107,17 @@ public class LogInView extends JFrame {
         });
     }
 
+    public static void loadMessagesFromFile() throws IOException {
+
+        if (!Files.exists(Message_Path)) {
+            FileUtils.copyURLToFile(MessagesServices.class.getClassLoader().getResource("messages.json"), Message_Path.toFile());
+        }
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        mess_1 = objectMapper.readValue(Message_Path.toFile(), new TypeReference<List<messages>>() {
+        });
+    }
 
 
     public LogInView() {
@@ -944,7 +956,7 @@ public class LogInView extends JFrame {
                 panel_message.add(player_name_txt,c_message);
                 c_message.gridx = 0;
                 c_message.gridy++;
-                JLabel mess = new JLabel("Message:");
+                final JLabel mess = new JLabel("Message:");
                 panel_message.add(mess,c_message);
                 c_message.gridx = 1;
                 final JTextField mess_txt = new JTextField(10);
@@ -979,6 +991,85 @@ public class LogInView extends JFrame {
                         }
                     }
                 });
+                see_message.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent actionEvent) {
+                        frame_message.show(false);
+                        final JFrame frame_see_message = new JFrame();
+                        frame_see_message.setVisible(true);
+                        frame_see_message.setSize(500,500);
+                        JPanel panel_see_message = new JPanel(new GridBagLayout());
+                        frame_see_message.add(panel_see_message);
+                        final GridBagConstraints c_see_message = new GridBagConstraints();
+                        c_see_message.gridx = 0;
+                        c_see_message.gridy = 0;
+                        c_see_message.insets = new Insets(10,10,10,10);
+                        JButton back_see_messages = new JButton("Back");
+                        panel_see_message.add(back_see_messages,c_see_message);
+                        c_see_message.gridx++;
+                        JButton see_your_messages = new JButton("See messages you send");
+                        panel_see_message.add(see_your_messages,c_see_message);
+                        c_see_message.gridx++;
+                        JButton see_messages_you_got = new JButton(("See messages you got"));
+                        panel_see_message.add(see_messages_you_got,c_see_message);
+                        back_see_messages.addActionListener(new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent actionEvent) {
+                                frame_message.show(true);
+                                frame_see_message.show(false);
+                            }
+                        });
+                        
+                        see_your_messages.addActionListener(new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent actionEvent) {
+                                frame_see_message.show(false);
+
+                                final JFrame frame_see_your_messages = new JFrame();
+                                frame_see_your_messages.setVisible(true);
+                                frame_see_your_messages.setSize(500,500);
+                                JPanel panel_see_your_messages = new JPanel(new GridBagLayout());
+                                frame_see_your_messages.add(panel_see_your_messages);
+                                GridBagConstraints c_see_your_messages = new GridBagConstraints();
+                                c_see_your_messages.gridx = 0;
+                                c_see_your_messages.gridy = 0;
+                                c_see_your_messages.insets = new Insets(10,10,10,10);
+                                try {
+                                    loadMessagesFromFile();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                                for(messages m:mess_1)
+                                {
+                                    if(Objects.equals(m.getFrom(),txtuser.getText()))
+                                    {
+                                        JLabel mess_to = new JLabel("To:");
+                                        panel_see_your_messages.add(mess_to,c_see_your_messages);
+                                        JLabel mess_send_to = new JLabel(m.getTo());
+                                        c_see_your_messages.gridx = 1;
+                                        panel_see_your_messages.add(mess_send_to,c_see_your_messages);
+                                        JLabel what_message = new JLabel(m.getMess());
+                                        c_see_your_messages.gridx = 0;
+                                        c_see_your_messages.gridy++;
+                                        panel_see_your_messages.add(what_message,c_see_your_messages);
+                                        c_see_your_messages.gridy++;
+                                    }
+                                }
+                                JButton back_see_your_messages = new JButton("Back");
+                                panel_see_your_messages.add(back_see_your_messages,c_see_your_messages);
+                                back_see_your_messages.addActionListener(new ActionListener() {
+                                    @Override
+                                    public void actionPerformed(ActionEvent actionEvent) {
+                                        frame_see_message.show(true);
+                                        frame_see_your_messages.show(false);
+                                    }
+                                });
+
+
+                            }
+                        });
+                    }
+                });
             }
         });
         see_annoucements.addActionListener(new ActionListener() {
@@ -997,6 +1088,7 @@ public class LogInView extends JFrame {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
+
                 final JFrame frame_see_ann = new JFrame("See annoucements");
                 frame_see_ann.setVisible(true);
                 frame_see_ann.setSize(500,500);

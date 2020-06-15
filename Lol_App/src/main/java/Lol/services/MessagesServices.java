@@ -16,7 +16,7 @@ public class MessagesServices {
     public static void loadMessagesFromFile() throws IOException {
 
         if (!Files.exists(Message_Path)) {
-            FileUtils.copyURLToFile(ModeratorServices.class.getClassLoader().getResource("messages.json"), Message_Path.toFile());
+            FileUtils.copyURLToFile(MessagesServices.class.getClassLoader().getResource("messages.json"), Message_Path.toFile());
         }
 
         ObjectMapper objectMapper = new ObjectMapper();
