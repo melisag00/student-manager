@@ -1004,7 +1004,7 @@ public class LogInView extends JFrame {
                         c_see_message.gridx = 0;
                         c_see_message.gridy = 0;
                         c_see_message.insets = new Insets(10,10,10,10);
-                        JButton back_see_messages = new JButton("Back");
+                        final JButton back_see_messages = new JButton("Back");
                         panel_see_message.add(back_see_messages,c_see_message);
                         c_see_message.gridx++;
                         JButton see_your_messages = new JButton("See messages you send");
@@ -1019,7 +1019,51 @@ public class LogInView extends JFrame {
                                 frame_see_message.show(false);
                             }
                         });
-                        
+                        see_messages_you_got.addActionListener(new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent actionEvent) {
+                                frame_see_message.show(false);
+                                final JFrame frame_see_messages_you_got = new JFrame();
+                                frame_see_messages_you_got.setVisible(true);
+                                frame_see_messages_you_got.setSize(500,500);
+                                JPanel panel_see_messages_you_got = new JPanel(new GridBagLayout());
+                                frame_see_messages_you_got.add(panel_see_messages_you_got);
+                                GridBagConstraints c_see_you_got = new GridBagConstraints();
+                                c_see_you_got.gridx = 0;
+                                c_see_you_got.gridy = 0;
+                                c_see_you_got.insets = new Insets(10,10,10,10);
+                                try {
+                                    loadMessagesFromFile();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                                for(messages m:mess_1)
+                                {
+                                    if(Objects.equals(m.getTo(),txtuser.getText()))
+                                    {
+                                        JLabel mess_to = new JLabel("From:");
+                                        panel_see_messages_you_got.add(mess_to,c_see_you_got);
+                                        JLabel mess_send_to = new JLabel(m.getFrom());
+                                        c_see_you_got.gridx = 1;
+                                        panel_see_messages_you_got.add(mess_send_to,c_see_you_got);
+                                        JLabel what_message = new JLabel(m.getMess());
+                                        c_see_you_got.gridx = 0;
+                                        c_see_you_got.gridy++;
+                                        panel_see_messages_you_got.add(what_message,c_see_you_got);
+                                        c_see_you_got.gridy++;
+                                    }
+                                }
+                                JButton back_see_messages_got = new JButton("Back");
+                                panel_see_messages_you_got.add(back_see_messages_got,c_see_you_got);
+                                back_see_messages_got.addActionListener(new ActionListener() {
+                                    @Override
+                                    public void actionPerformed(ActionEvent actionEvent) {
+                                        frame_see_message.show(true);
+                                        frame_see_messages_you_got.show(false);
+                                    }
+                                });
+                            }
+                        });
                         see_your_messages.addActionListener(new ActionListener() {
                             @Override
                             public void actionPerformed(ActionEvent actionEvent) {
