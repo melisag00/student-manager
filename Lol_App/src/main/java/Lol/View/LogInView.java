@@ -6,6 +6,7 @@ import Lol.Tournaments.Tournament;
 import Lol.Tournaments.Tournament_details;
 import Lol.annoucements.annoucement;
 import Lol.controllers.LogInController;
+import Lol.controllers.MessagesController;
 import Lol.controllers.ParticipantController;
 import Lol.controllers.TournamentController;
 import Lol.services.CustomerServices;
@@ -30,6 +31,7 @@ public class LogInView extends JFrame {
     private LogInController controller;
     private TournamentController controller2;
     private ParticipantController controller3;
+    private MessagesController controller4;
 
     private JTextField txtuser;
     private JPasswordField ps;
@@ -110,6 +112,7 @@ public class LogInView extends JFrame {
         controller = new LogInController(this);
         controller2 = new TournamentController(this);
         controller3 = new ParticipantController(this);
+        controller4 = new MessagesController(this);
         final JFrame frame1 = new JFrame("Lol-App");
         frame1.setVisible(true);
         frame1.setSize(300,200);
@@ -936,7 +939,7 @@ public class LogInView extends JFrame {
                 c_message.gridy = 2;
                 JLabel player_name = new JLabel("Player name:");
                 panel_message.add(player_name,c_message);
-                JTextField player_name_txt = new JTextField(10);
+                final JTextField player_name_txt = new JTextField(10);
                 c_message.gridx = 1;
                 panel_message.add(player_name_txt,c_message);
                 c_message.gridx = 0;
@@ -944,7 +947,7 @@ public class LogInView extends JFrame {
                 JLabel mess = new JLabel("Message:");
                 panel_message.add(mess,c_message);
                 c_message.gridx = 1;
-                JTextField mess_txt = new JTextField(10);
+                final JTextField mess_txt = new JTextField(10);
                 panel_message.add(mess_txt,c_message);
                 c_message.gridx = 0;
                 c_message.gridy++;
@@ -961,6 +964,19 @@ public class LogInView extends JFrame {
                     public void actionPerformed(ActionEvent actionEvent) {
                         frame1.show(true);
                         frame_message.show(false);
+                    }
+                });
+                send_message.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent actionEvent) {
+                        try {
+                            if(controller4.sendMessage(txtuser.getText(),player_name_txt.getText(),mess_txt.getText()))
+                            {
+                                JOptionPane.showMessageDialog(null, "You send the message with succes", "Sending message", JOptionPane.INFORMATION_MESSAGE);
+                            }
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
                     }
                 });
             }
