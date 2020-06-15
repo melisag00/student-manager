@@ -2,6 +2,7 @@ package Lol.controllers;
 
 import Lol.View.LogInView;
 import Lol.services.TournamentServices;
+import Lol.services.Tournament_detailsServices;
 
 import java.io.IOException;
 
@@ -23,6 +24,11 @@ public class TournamentController{
 
     public boolean deleteTournament(String name) throws IOException {
         TournamentServices.delete(name);
+        return true;
+    }
+
+    public boolean add_details(String name, String details) throws IOException {
+        Tournament_detailsServices.add_details(name,details);
         return true;
     }
 

@@ -3,6 +3,7 @@ package Lol.View;
 import Lol.Customer.customer;
 import Lol.Participant.participant;
 import Lol.Tournaments.Tournament;
+import Lol.Tournaments.Tournament_details;
 import Lol.annoucements.annoucement;
 import Lol.controllers.LogInController;
 import Lol.controllers.ParticipantController;
@@ -10,6 +11,7 @@ import Lol.controllers.TournamentController;
 import Lol.services.CustomerServices;
 import Lol.services.FileSystemService;
 import Lol.services.ModeratorServices;
+import Lol.services.ParticipantServices;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.apache.commons.io.FileUtils;
@@ -42,6 +44,21 @@ public class LogInView extends JFrame {
 
     private static List<Tournament> tour;
     private static final Path USERS_PATH2 = FileSystemService.getPathToFile("config", "tournament.json");
+
+    private static List<Tournament_details> tour_det;
+    private static final Path Tour_det_path = FileSystemService.getPathToFile("config","try_details.json");
+
+    public static void loadDetailsFromFile() throws IOException {
+
+        if (!Files.exists(Tour_det_path)) {
+            FileUtils.copyURLToFile(ParticipantServices.class.getClassLoader().getResource("try_details.json"), Tour_det_path.toFile());
+        }
+
+        ObjectMapper objectMapper = new ObjectMapper();
+
+        tour_det = objectMapper.readValue(Tour_det_path.toFile(), new TypeReference<List<Tournament_details>>() {
+        });
+    }
 
     public static void loadParticipants() throws IOException {
 
@@ -532,6 +549,168 @@ public class LogInView extends JFrame {
                                           JButton see_players = new JButton("See participants");
                                           c_show.gridx = 1;
                                           pan_show.add(see_players,c_show);
+                                          JButton details = new JButton("Details");
+                                          c_show.gridx = 2;
+                                          pan_show.add(details,c_show);
+                                          details.addActionListener(new ActionListener() {
+                                              @Override
+                                              public void actionPerformed(ActionEvent actionEvent) {
+                                                  frame_tour.show(false);
+                                                  final JFrame frame_details = new JFrame();
+                                                  frame_details.setSize(500,500);
+                                                  frame_details.setVisible(true);
+                                                  JPanel panel_details = new JPanel(new GridBagLayout());
+                                                  frame_details.add(panel_details);
+                                                  final GridBagConstraints c_details = new GridBagConstraints();
+                                                  c_details.gridx = 0;
+                                                  c_details.gridy = 0;
+                                                  c_details.insets = new Insets(10,10,10,10);
+                                                  JButton back_details = new JButton("Back");
+                                                  panel_details.add(back_details,c_details);
+                                                  JButton add_details = new JButton("Add details");
+                                                  c_details.gridx = 1;
+                                                  panel_details.add(add_details,c_details);
+                                                  JButton see_details = new JButton("See details");
+                                                  c_details.gridx = 2;
+                                                  panel_details.add(see_details,c_details);
+                                                  back_details.addActionListener(new ActionListener() {
+                                                      @Override
+                                                      public void actionPerformed(ActionEvent actionEvent) {
+                                                          frame_details.show(false);
+                                                          frame_tour.show(true);
+                                                      }
+                                                  });
+                                                  see_details.addActionListener(new ActionListener() {
+                                                      @Override
+                                                      public void actionPerformed(ActionEvent actionEvent) {
+                                                          frame_details.show(false);
+                                                          final JFrame frame_see_details = new JFrame();
+                                                          frame_see_details.setVisible(true);
+                                                          frame_see_details.setSize(500,500);
+                                                          JPanel panel_see_details = new JPanel(new GridBagLayout());
+                                                          frame_see_details.getContentPane().add(panel_see_details, BorderLayout.NORTH);
+                                                          GridBagConstraints c_see_details = new GridBagConstraints();
+                                                          c_see_details.gridx = 0;
+                                                          c_see_details.gridy = 0;
+                                                          c_see_details.insets = new Insets(10,10,10,10);
+                                                          JLabel name_trn = new JLabel("Tournament name:");
+                                                          panel_see_details.add(name_trn,c_see_details);
+                                                          c_see_details.gridx = 1;
+                                                          final JTextField name_trn_txt = new JTextField(10);
+                                                          panel_see_details.add(name_trn_txt, c_see_details);
+                                                          c_see_details.gridx = 0;
+                                                          c_see_details.gridy = 1;
+                                                          JButton back_see_details = new JButton("Back");
+                                                          panel_see_details.add(back_see_details,c_see_details);
+                                                          JButton see = new JButton("See");
+                                                          c_see_details.gridx = 1;
+                                                          panel_see_details.add(see,c_see_details);
+                                                          back_see_details.addActionListener(new ActionListener() {
+                                                              @Override
+                                                              public void actionPerformed(ActionEvent actionEvent) {
+                                                                  frame_see_details.show(false);
+                                                                  frame_details.show(true);
+                                                              }
+                                                          });
+                                                          see.addActionListener(new ActionListener() {
+                                                              @Override
+                                                              public void actionPerformed(ActionEvent actionEvent) {
+                                                                  frame_see_details.show(false);
+                                                                  final JFrame frame_button_see = new JFrame();
+                                                                  frame_button_see.setVisible(true);
+                                                                  frame_button_see.setSize(500,500);
+                                                                  JPanel panel_button_see = new JPanel(new GridBagLayout());
+                                                                  frame_button_see.add(panel_button_see);
+                                                                  GridBagConstraints c_button_see = new GridBagConstraints();
+                                                                  c_button_see.gridx = 0;
+                                                                  c_button_see.gridy = 0;
+                                                                  c_button_see.insets = new Insets(10,10,10,10);
+                                                                  try {
+                                                                      loadDetailsFromFile();
+                                                                  } catch (IOException e) {
+                                                                      e.printStackTrace();
+                                                                  }
+                                                                  for(Tournament_details t_d:tour_det)
+                                                                  {
+                                                                      if(Objects.equals(t_d.getName(),name_trn_txt.getText()))
+                                                                      {
+                                                                          JLabel show = new JLabel(t_d.getDetails());
+                                                                          panel_button_see.add(show,c_button_see);
+                                                                          c_button_see.gridy++;
+                                                                      }
+                                                                  }
+                                                                  JButton back_see_button = new JButton("Back");
+                                                                  panel_button_see.add(back_see_button,c_button_see);
+                                                                  back_see_button.addActionListener(new ActionListener() {
+                                                                      @Override
+                                                                      public void actionPerformed(ActionEvent actionEvent) {
+                                                                          frame_button_see.show(false);
+                                                                          frame_see_details.show(true);
+                                                                      }
+                                                                  });
+
+                                                              }
+                                                          });
+                                                      }
+                                                  });
+                                                  add_details.addActionListener(new ActionListener() {
+                                                      @Override
+                                                      public void actionPerformed(ActionEvent actionEvent) {
+                                                          frame_details.show(false);
+                                                          final JFrame frame_add_details = new JFrame();
+                                                          frame_add_details.setVisible(true);
+                                                          frame_add_details.setSize(500,500);
+                                                          JPanel panel_add_details = new JPanel(new GridBagLayout());
+                                                          GridBagConstraints c_add_details = new GridBagConstraints();
+                                                          frame_add_details.add(panel_add_details);
+                                                          c_add_details.gridx = 0;
+                                                          c_add_details.gridy = 0;
+                                                          c_add_details.insets = new Insets(10,10,10,10);
+                                                          JLabel name_tournament = new JLabel("Tournament name:");
+                                                          panel_add_details.add(name_tournament,c_add_details);
+                                                          c_add_details.gridx = 1;
+                                                          final JTextField name_tournament_txt = new JTextField(10);
+                                                          panel_add_details.add(name_tournament_txt,c_add_details);
+                                                          c_add_details.gridx = 0;
+                                                          c_add_details.gridy = 1;
+                                                          JLabel details_tourn = new JLabel("Details:");
+                                                          panel_add_details.add(details_tourn,c_add_details);
+                                                          final JTextField details_tour_txt = new JTextField(10);
+                                                          c_add_details.gridx = 1;
+                                                          panel_add_details.add(details_tour_txt,c_add_details);
+                                                          JButton back_add_details = new JButton("Back");
+                                                          c_add_details.gridx = 0;
+                                                          c_add_details.gridy = 2;
+                                                          panel_add_details.add(back_add_details,c_add_details);
+                                                          c_add_details.gridx = 1;
+                                                          JButton adauga = new JButton("Add");
+                                                          panel_add_details.add(adauga,c_add_details);
+                                                          back_add_details.addActionListener(new ActionListener() {
+                                                              @Override
+                                                              public void actionPerformed(ActionEvent actionEvent) {
+                                                                  frame_details.show(true);
+                                                                  frame_add_details.show(false);
+                                                              }
+                                                          });
+                                                          adauga.addActionListener(new ActionListener() {
+                                                              @Override
+                                                              public void actionPerformed(ActionEvent actionEvent) {
+                                                                  try {
+                                                                      if(controller2.add_details(name_tournament_txt.getText(),details_tour_txt.getText()))
+                                                                      {
+                                                                          JOptionPane.showMessageDialog(null, "Details add with succes", "Adding details", JOptionPane.INFORMATION_MESSAGE);
+
+                                                                      }
+                                                                  } catch (IOException e) {
+                                                                      e.printStackTrace();
+                                                                  }
+                                                              }
+                                                          });
+
+                                                      }
+                                                  });
+                                              }
+                                          });
                                           back_show.addActionListener(new ActionListener() {
                                               @Override
                                               public void actionPerformed(ActionEvent actionEvent) {
@@ -733,6 +912,59 @@ public class LogInView extends JFrame {
         c_show.gridx = 1;
         JButton see_annoucements = new JButton("See annoucements");
         pan_show.add(see_annoucements,c_show);
+        c_show.gridx = 2;
+        JButton message = new JButton("Message");
+        pan_show.add(message,c_show);
+        message.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                frame1.show(false);
+                final JFrame frame_message = new JFrame();
+                frame_message.setSize(800,800);
+                frame_message.setVisible(true);
+                JPanel panel_message = new JPanel(new GridBagLayout());
+                frame_message.add(panel_message);
+                GridBagConstraints c_message = new GridBagConstraints();
+                JLabel thing = new JLabel("Thing you need to know:");
+                c_message.gridx = 0;
+                c_message.gridy = 0;
+                c_message.insets = new Insets(10,10,10,10);
+                panel_message.add(thing,c_message);
+                JLabel msg = new JLabel("The messagery works like an email!");
+                c_message.gridy = 1;
+                panel_message.add(msg,c_message);
+                c_message.gridy = 2;
+                JLabel player_name = new JLabel("Player name:");
+                panel_message.add(player_name,c_message);
+                JTextField player_name_txt = new JTextField(10);
+                c_message.gridx = 1;
+                panel_message.add(player_name_txt,c_message);
+                c_message.gridx = 0;
+                c_message.gridy++;
+                JLabel mess = new JLabel("Message:");
+                panel_message.add(mess,c_message);
+                c_message.gridx = 1;
+                JTextField mess_txt = new JTextField(10);
+                panel_message.add(mess_txt,c_message);
+                c_message.gridx = 0;
+                c_message.gridy++;
+                JButton back_message = new JButton("Back");
+                panel_message.add(back_message,c_message);
+                c_message.gridx = 1;
+                JButton see_message = new JButton("See messages");
+                panel_message.add(see_message,c_message);
+                c_message.gridx = 2;
+                JButton send_message = new JButton("Send message");
+                panel_message.add(send_message,c_message);
+                back_message.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent actionEvent) {
+                        frame1.show(true);
+                        frame_message.show(false);
+                    }
+                });
+            }
+        });
         see_annoucements.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
