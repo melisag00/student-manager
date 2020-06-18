@@ -17,11 +17,11 @@ public class TournamentServices {
     private static List<Tournament> tour;
 
 
-    private static final Path USERS_PATH = FileSystemService.getPathToFile("config", "tournament.json");
+    private static final Path USERS_PATH = FileSystemService.getPathToFile("config", "tournaments.json");
     public static void loadUsersFromFile() throws IOException {
 
         if (!Files.exists(USERS_PATH)) {
-            FileUtils.copyURLToFile(CustomerServices.class.getClassLoader().getResource("tournament.json"), USERS_PATH.toFile());
+            FileUtils.copyURLToFile(CustomerServices.class.getClassLoader().getResource("tournaments.json"), USERS_PATH.toFile());
         }
 
         ObjectMapper objectMapper = new ObjectMapper();
@@ -60,4 +60,9 @@ public class TournamentServices {
        }
 
    }
+
+    public static void main(String[] args) throws IOException {
+        loadUsersFromFile();
+        System.out.println(tour);
+    }
 }

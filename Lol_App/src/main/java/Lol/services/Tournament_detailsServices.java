@@ -36,4 +36,9 @@ public class Tournament_detailsServices {
             throw new CouldNotWriteTournamentException();
         }
     }
+
+    public static void main(String[] args) throws IOException {
+        loadDetailsFromFile();
+        System.out.println(tour_details);
+    }
 }

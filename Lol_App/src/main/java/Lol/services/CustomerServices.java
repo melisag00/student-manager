@@ -17,7 +17,6 @@ import java.util.Objects;
 public class CustomerServices {
     private static List<customer> users;
     private static final Path USERS_PATH = FileSystemService.getPathToFile("config", "partner.json");
-
     public static void loadUsersFromFile() throws IOException {
 
         if (!Files.exists(USERS_PATH)) {
@@ -33,19 +32,29 @@ public class CustomerServices {
         loadUsersFromFile();
         int ok = 1;
         List<customer> cust_delete = new ArrayList<customer>();
-        for(customer c:users)
+        if(users == null)
         {
-            if(!Objects.equals(c.getUsername(),username))
-            {
-               cust_delete.add(new customer(c.getUsername(),c.getCustomer_role(),c.getRank(),c.getPartner_role()));
+            cust_delete.add(new customer(username,customer_role,rank,partner_role));
+            try {
+                ObjectMapper objectMapper = new ObjectMapper();
+                objectMapper.writerWithDefaultPrettyPrinter().writeValue(USERS_PATH.toFile(), cust_delete);
+            } catch (IOException e) {
+                throw new CouldNotWriteUsersException();
             }
         }
-        cust_delete.add(new customer(username,customer_role,rank,partner_role));
-        try {
-            ObjectMapper objectMapper = new ObjectMapper();
-            objectMapper.writerWithDefaultPrettyPrinter().writeValue(USERS_PATH.toFile(), cust_delete);
-        } catch (IOException e) {
-            throw new CouldNotWriteUsersException();
+        else {
+            for (customer c : users) {
+                if (!Objects.equals(c.getUsername(), username)) {
+                    cust_delete.add(new customer(c.getUsername(), c.getCustomer_role(), c.getRank(), c.getPartner_role()));
+                }
+            }
+            cust_delete.add(new customer(username, customer_role, rank, partner_role));
+            try {
+                ObjectMapper objectMapper = new ObjectMapper();
+                objectMapper.writerWithDefaultPrettyPrinter().writeValue(USERS_PATH.toFile(), cust_delete);
+            } catch (IOException e) {
+                throw new CouldNotWriteUsersException();
+            }
         }
     }
 
@@ -66,7 +75,7 @@ public class CustomerServices {
     }
 
     public static void main(String[] args) throws IOException {
-
+        add("customeracc","Top","Bronze","Jungle");
         loadUsersFromFile();
         System.out.println(users);
     }

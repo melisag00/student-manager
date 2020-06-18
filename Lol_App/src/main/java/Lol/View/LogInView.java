@@ -43,7 +43,7 @@ public class LogInView extends JFrame {
     private static final Path Annouce_Path = FileSystemService.getPathToFile("congif","annoucements.json");
 
     private static List<Tournament> tour;
-    private static final Path USERS_PATH2 = FileSystemService.getPathToFile("config", "tournament.json");
+    private static final Path USERS_PATH2 = FileSystemService.getPathToFile("config", "tournaments.json");
 
     private static List<Tournament_details> tour_det;
     private static final Path Tour_det_path = FileSystemService.getPathToFile("config","try_details.json");
@@ -98,7 +98,7 @@ public class LogInView extends JFrame {
     public static void loadUsersFromFile2() throws IOException {
 
         if (!Files.exists(USERS_PATH2)) {
-            FileUtils.copyURLToFile(CustomerServices.class.getClassLoader().getResource("tournament.json"), USERS_PATH2.toFile());
+            FileUtils.copyURLToFile(CustomerServices.class.getClassLoader().getResource("tournaments.json"), USERS_PATH2.toFile());
         }
 
         ObjectMapper objectMapper = new ObjectMapper();
@@ -127,7 +127,7 @@ public class LogInView extends JFrame {
         controller4 = new MessagesController(this);
         final JFrame frame1 = new JFrame("Lol-App");
         frame1.setVisible(true);
-        frame1.setSize(300,200);
+        frame1.setSize(500,500);
         JPanel panel = new JPanel(new GridBagLayout());
         frame1.getContentPane().add(panel,BorderLayout.NORTH);
         GridBagConstraints c = new GridBagConstraints();
