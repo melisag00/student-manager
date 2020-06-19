@@ -1,6 +1,7 @@
 package Lol.controllers;
 
 import Lol.View.LogInView;
+import Lol.exceptions.NoAnnoucementException;
 import Lol.exceptions.UsernameOrPasswordIncorrect;
 import Lol.exceptions.WrongRoleException;
 import Lol.services.CustomerServices;
@@ -64,8 +65,14 @@ public class LogInController {
            return number;
         }
 
-        public boolean putAnnoucement(String annouce) throws IOException {
-            ModeratorServices.addAnnoucement(annouce);
+        public boolean putAnnoucement(String annouce) throws IOException, NoAnnoucementException {
+            try {
+                ModeratorServices.addAnnoucement(annouce);
+            }
+            catch(NoAnnoucementException e)
+            {
+                return false;
+            }
             return true;
         }
 

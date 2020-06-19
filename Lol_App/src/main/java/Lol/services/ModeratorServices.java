@@ -22,7 +22,8 @@ public class ModeratorServices {
     private static List<moderator> users;
     private static final Path USERS_PATH = FileSystemService.getPathToFile("config", "users.json");
     private static List<annoucement> ann;
-    private static final Path Annouce_Path = FileSystemService.getPathToFile("congif","annoucements.json");
+    private static List<annoucement> ann_void;
+    private static final Path Annouce_Path = FileSystemService.getPathToFile("congif","annouce.json");
 
     public static void loadUsersFromFile() throws IOException {
 
@@ -38,7 +39,7 @@ public class ModeratorServices {
 
     public static void loadAnnoucementsFromFile() throws IOException{
         if(!Files.exists(Annouce_Path)){
-            FileUtils.copyURLToFile(ModeratorServices.class.getClassLoader().getResource("annoucements.json"),Annouce_Path.toFile());
+            FileUtils.copyURLToFile(ModeratorServices.class.getClassLoader().getResource("annouce.json"),Annouce_Path.toFile());
         }
         ObjectMapper objectMapper = new ObjectMapper();
         ann = objectMapper.readValue(Annouce_Path.toFile(), new TypeReference<List<annoucement>>() {
@@ -116,16 +117,25 @@ public class ModeratorServices {
         return count;
     }
 
-    public static void addAnnoucement(String annouce) throws IOException {
-      loadAnnoucementsFromFile();
-        ann.add(new annoucement(annouce));
-        try {
-            ObjectMapper objectMapper = new ObjectMapper();
-            objectMapper.writerWithDefaultPrettyPrinter().writeValue(Annouce_Path.toFile(), ann);
-        } catch (IOException e) {
-            throw new CouldNotWriteTournamentException();
-        }
-    }
+    public static void addAnnoucement(String annouce) throws IOException, NoAnnoucementException {
+        loadAnnoucementsFromFile();
+            try {
+                if (annouce == "")
+                    throw new NoAnnoucementException(annouce);
+            }
+            catch(NoAnnoucementException e) {
+                throw new NoAnnoucementException(annouce);
+            }
+                    ann.add(new annoucement(annouce));
+                    try {
+                        ObjectMapper objectMapper = new ObjectMapper();
+                        objectMapper.writerWithDefaultPrettyPrinter().writeValue(Annouce_Path.toFile(), ann);
+                    } catch (IOException e) {
+                        throw new CouldNotWriteTournamentException();
+                    }
+            }
+
+
 
     private static String encodePassword(String salt, String password) {
         MessageDigest md = getMessageDigest();
@@ -148,8 +158,8 @@ public class ModeratorServices {
         return md;
     }
 
-    public static void main(String[] args) throws IOException {
-        loadUsersFromFile();
-        System.out.println(users);
+    public static void main(String[] args) throws IOException, NoAnnoucementException {
+        loadAnnoucementsFromFile();
+        System.out.println(ann);
     }
 }

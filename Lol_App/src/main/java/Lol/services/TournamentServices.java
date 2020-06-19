@@ -52,6 +52,8 @@ public class TournamentServices {
                tour_delete.add(new Tournament(t.getName(),t.getDate()));
            }
        }
+       Tournament_detailsServices.delete_details(name);
+       ParticipantServices.delete_participants(name);
        try {
            ObjectMapper objectMapper = new ObjectMapper();
            objectMapper.writerWithDefaultPrettyPrinter().writeValue(USERS_PATH.toFile(), tour_delete);

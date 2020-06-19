@@ -9,10 +9,13 @@ import org.apache.commons.io.FileUtils;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class ParticipantServices {
     private static List<participant> tour_part;
+    private static List<participant> delete_part = new ArrayList<participant>();
     private static final Path participant_path = FileSystemService.getPathToFile("config", "participanti_tournament.json");
     public static void loadUsersFromFile() throws IOException {
 
@@ -31,6 +34,22 @@ public class ParticipantServices {
         try {
             ObjectMapper objectMapper = new ObjectMapper();
             objectMapper.writerWithDefaultPrettyPrinter().writeValue(participant_path.toFile(), tour_part);
+        } catch (IOException e) {
+            throw new CouldNotWriteTournamentException();
+        }
+    }
+    public static void delete_participants(String tournament_name) throws IOException {
+      loadUsersFromFile();
+      for(participant p:tour_part)
+      {
+          if(!Objects.equals(p.getTournament_name(),tournament_name))
+          {
+              delete_part.add(new participant(tournament_name,p.getUsername()));
+          }
+      }
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(participant_path.toFile(), delete_part);
         } catch (IOException e) {
             throw new CouldNotWriteTournamentException();
         }

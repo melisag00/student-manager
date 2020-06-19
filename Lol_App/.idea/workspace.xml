@@ -4,16 +4,92 @@
     <list default="true" id="ecade48b-95fc-4a4f-bc4e-3bd169d7525c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Lol/View/LogInView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lol/View/LogInView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lol/controllers/LogInController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lol/controllers/LogInController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Lol/services/CustomerServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lol/services/CustomerServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lol/services/ModeratorServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lol/services/ModeratorServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lol/services/ParticipantServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lol/services/ParticipantServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Lol/services/TournamentServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lol/services/TournamentServices.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Lol/services/Tournament_detailsServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lol/services/Tournament_detailsServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/tournament.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/annoucements.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$10$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$10$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$10$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$10$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$10$3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$10$3$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$10$3$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$10$3$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$10$3$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$10$3$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$10$3$3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$10$3$3$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$10$3$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$10$3$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$10$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$10$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$10.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$11$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$11$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$11$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$11$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$11.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$12$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$12$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$12$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$12$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$12$2$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$12$2$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$12$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$12$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$12$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$12$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$12.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$2$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$2$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$2$2$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$2$2$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$2$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$2$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$2$3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$2$3$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$2$3$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$2$3$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$2$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$2$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$2$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$2$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$2$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$2$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$3$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$3$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$3$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$2$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$2$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$2$2$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$2$2$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$2$2$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$2$2$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$2$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$2$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$2$3$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$2$3$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$2$3$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$2$3$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$2$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$2$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$4$1$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$4$1$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$4$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$4$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$4$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$4$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$8.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView$9.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Lol/View/LogInView.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/View/LogInView.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Lol/services/CustomerServices$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/services/CustomerServices$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/controllers/LogInController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/controllers/LogInController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Lol/services/CustomerServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/services/CustomerServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/services/ModeratorServices$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/services/ModeratorServices$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/services/ModeratorServices$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/services/ModeratorServices$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/services/ModeratorServices$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/services/ModeratorServices$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/services/ModeratorServices$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/services/ModeratorServices$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/services/ModeratorServices$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/services/ModeratorServices$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/services/ModeratorServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/services/ModeratorServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/services/ParticipantServices$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/services/ParticipantServices$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/services/ParticipantServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/services/ParticipantServices.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Lol/services/TournamentServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/services/TournamentServices.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/services/Tournament_detailsServices$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/services/Tournament_detailsServices$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Lol/services/Tournament_detailsServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/services/Tournament_detailsServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/tournament.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/annoucements.json" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,8 +226,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MessagesServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lol.services.MessagesServices" />
+    <configuration name="ModeratorServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lol.services.ModeratorServices" />
       <module name="Lol_App" />
       <extension name="coverage">
         <pattern>
@@ -163,8 +239,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ModeratorServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lol.services.ModeratorServices" />
+    <configuration name="ParticipantServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lol.services.ParticipantServices" />
       <module name="Lol_App" />
       <extension name="coverage">
         <pattern>
@@ -204,11 +280,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ParticipantServices" />
+        <item itemvalue="Application.ModeratorServices" />
         <item itemvalue="Application.TournamentServices" />
         <item itemvalue="Application.Tournament_detailsServices" />
         <item itemvalue="Application.CustomerServices" />
-        <item itemvalue="Application.MessagesServices" />
-        <item itemvalue="Application.ModeratorServices" />
       </list>
     </recent_temporary>
   </component>
@@ -441,10 +517,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="389" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.824@0.0.1536.824" timestamp="1588685963825" />
-    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592481444420">
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1592483318023">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1592481444420" />
+    <state x="499" y="162" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1592483318023" />
     <state x="520" y="272" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1588694230504">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -461,22 +537,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589459180939" />
-    <state width="1493" height="135" key="GridCell.Tab.0.bottom" timestamp="1592481625417">
+    <state width="1493" height="135" key="GridCell.Tab.0.bottom" timestamp="1592571793874">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="135" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592481625417" />
-    <state width="1493" height="135" key="GridCell.Tab.0.center" timestamp="1592481625417">
+    <state width="1493" height="135" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592571793874" />
+    <state width="1493" height="135" key="GridCell.Tab.0.center" timestamp="1592571793874">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="135" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592481625417" />
-    <state width="1493" height="135" key="GridCell.Tab.0.left" timestamp="1592481625417">
+    <state width="1493" height="135" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592571793874" />
+    <state width="1493" height="135" key="GridCell.Tab.0.left" timestamp="1592571793873">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="135" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592481625417" />
-    <state width="1493" height="135" key="GridCell.Tab.0.right" timestamp="1592481625417">
+    <state width="1493" height="135" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592571793873" />
+    <state width="1493" height="135" key="GridCell.Tab.0.right" timestamp="1592571793874">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="135" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592481625417" />
+    <state width="1493" height="135" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592571793874" />
     <state x="435" y="76" key="Maven.ArtifactSearchDialog" timestamp="1589458957027">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

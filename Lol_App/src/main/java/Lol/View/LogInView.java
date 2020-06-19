@@ -10,6 +10,7 @@ import Lol.controllers.LogInController;
 import Lol.controllers.MessagesController;
 import Lol.controllers.ParticipantController;
 import Lol.controllers.TournamentController;
+import Lol.exceptions.NoAnnoucementException;
 import Lol.services.*;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -40,7 +41,7 @@ public class LogInView extends JFrame {
     private static final Path participant_path = FileSystemService.getPathToFile("config", "participanti_tournament.json");
 
     private static List<annoucement> ann;
-    private static final Path Annouce_Path = FileSystemService.getPathToFile("congif","annoucements.json");
+    private static final Path Annouce_Path = FileSystemService.getPathToFile("congif","annouce.json");
 
     private static List<Tournament> tour;
     private static final Path USERS_PATH2 = FileSystemService.getPathToFile("config", "tournaments.json");
@@ -88,7 +89,7 @@ public class LogInView extends JFrame {
 
     public static void loadAnnoucementsFromFile() throws IOException{
         if(!Files.exists(Annouce_Path)){
-            FileUtils.copyURLToFile(ModeratorServices.class.getClassLoader().getResource("annoucements.json"),Annouce_Path.toFile());
+            FileUtils.copyURLToFile(ModeratorServices.class.getClassLoader().getResource("annouce.json"),Annouce_Path.toFile());
         }
         ObjectMapper objectMapper = new ObjectMapper();
         ann = objectMapper.readValue(Annouce_Path.toFile(), new TypeReference<List<annoucement>>() {
@@ -359,13 +360,19 @@ public class LogInView extends JFrame {
                                                put_ann.addActionListener(new ActionListener() {
                                                    @Override
                                                    public void actionPerformed(ActionEvent actionEvent) {
+                                                       String s = new String(ann_txt.getText());
                                                        try {
-                                                           if(controller.putAnnoucement(ann_txt.getText()))
+                                                           if(controller.putAnnoucement(s))
                                                            {
+                                                               System.out.println(ann_txt.getText());
                                                                JOptionPane.showMessageDialog(null, "Annouce add with succes", "Annouce", JOptionPane.INFORMATION_MESSAGE);
+                                                           }
+                                                           else
+                                                           {
+                                                               JOptionPane.showMessageDialog(null, "No annoucement!", "Annouce", JOptionPane.ERROR_MESSAGE);
 
                                                            }
-                                                       } catch (IOException e) {
+                                                       } catch (IOException | NoAnnoucementException e) {
                                                            e.printStackTrace();
                                                        }
                                                    }
@@ -1203,6 +1210,82 @@ public class LogInView extends JFrame {
                 c_show.gridx = 1;
                 c_show.gridy++;
                 pan_show.add(participate,c_show);
+                c_show.gridx = 0;
+                JButton details_tour = new JButton("Details");
+                pan_show.add(details_tour,c_show);
+                details_tour.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent actionEvent) {
+                        frame_tour.show(false);
+                        final JFrame frame_see_details = new JFrame();
+                        frame_see_details.setVisible(true);
+                        frame_see_details.setSize(500,500);
+                        JPanel panel_see_details = new JPanel(new GridBagLayout());
+                        frame_see_details.getContentPane().add(panel_see_details, BorderLayout.NORTH);
+                        GridBagConstraints c_see_details = new GridBagConstraints();
+                        c_see_details.gridx = 0;
+                        c_see_details.gridy = 0;
+                        c_see_details.insets = new Insets(10,10,10,10);
+                        JLabel name_trn = new JLabel("Tournament name:");
+                        panel_see_details.add(name_trn,c_see_details);
+                        c_see_details.gridx = 1;
+                        final JTextField name_trn_txt = new JTextField(10);
+                        panel_see_details.add(name_trn_txt, c_see_details);
+                        c_see_details.gridx = 0;
+                        c_see_details.gridy = 1;
+                        JButton back_see_details = new JButton("Back");
+                        panel_see_details.add(back_see_details,c_see_details);
+                        JButton see = new JButton("See");
+                        c_see_details.gridx = 1;
+                        panel_see_details.add(see,c_see_details);
+                        back_see_details.addActionListener(new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent actionEvent) {
+                                frame_see_details.show(false);
+                                frame_tour.show(true);
+                            }
+                        });
+                        see.addActionListener(new ActionListener() {
+                            @Override
+                            public void actionPerformed(ActionEvent actionEvent) {
+                                frame_see_details.show(false);
+                                final JFrame frame_button_see = new JFrame();
+                                frame_button_see.setVisible(true);
+                                frame_button_see.setSize(500,500);
+                                JPanel panel_button_see = new JPanel(new GridBagLayout());
+                                frame_button_see.add(panel_button_see);
+                                GridBagConstraints c_button_see = new GridBagConstraints();
+                                c_button_see.gridx = 0;
+                                c_button_see.gridy = 0;
+                                c_button_see.insets = new Insets(10,10,10,10);
+                                try {
+                                    loadDetailsFromFile();
+                                } catch (IOException e) {
+                                    e.printStackTrace();
+                                }
+                                for(Tournament_details t_d:tour_det)
+                                {
+                                    if(Objects.equals(t_d.getName(),name_trn_txt.getText()))
+                                    {
+                                        JLabel show = new JLabel(t_d.getDetails());
+                                        panel_button_see.add(show,c_button_see);
+                                        c_button_see.gridy++;
+                                    }
+                                }
+                                JButton back_see_button = new JButton("Back");
+                                panel_button_see.add(back_see_button,c_button_see);
+                                back_see_button.addActionListener(new ActionListener() {
+                                    @Override
+                                    public void actionPerformed(ActionEvent actionEvent) {
+                                        frame_button_see.show(false);
+                                        frame_see_details.show(true);
+                                    }
+                                });
+
+                            }
+                        });
+                    }
+                });
                     participate.addActionListener(new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent actionEvent) {

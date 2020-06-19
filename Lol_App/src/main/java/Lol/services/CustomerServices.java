@@ -75,7 +75,6 @@ public class CustomerServices {
     }
 
     public static void main(String[] args) throws IOException {
-        add("customeracc","Top","Bronze","Jungle");
         loadUsersFromFile();
         System.out.println(users);
     }
