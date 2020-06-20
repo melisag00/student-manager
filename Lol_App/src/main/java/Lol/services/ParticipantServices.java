@@ -17,6 +17,11 @@ public class ParticipantServices {
     private static List<participant> tour_part;
     private static List<participant> delete_part = new ArrayList<participant>();
     private static final Path participant_path = FileSystemService.getPathToFile("config", "participanti_tournament.json");
+
+    public static Path getParticipant_path() {
+        return participant_path;
+    }
+
     public static void loadUsersFromFile() throws IOException {
 
         if (!Files.exists(participant_path)) {
@@ -53,6 +58,10 @@ public class ParticipantServices {
         } catch (IOException e) {
             throw new CouldNotWriteTournamentException();
         }
+    }
+
+    public static List<participant> getTour_part() {
+        return tour_part;
     }
 
     public static void main(String[] args) throws IOException {

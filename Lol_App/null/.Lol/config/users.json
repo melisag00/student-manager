@@ -1,5 +1,9 @@
 [ {
-  "username" : "testUser",
-  "password" : "testPassword",
-  "role" : null
+  "username" : "test1",
+  "password" : "testPass1",
+  "role" : "123"
+}, {
+  "username" : "test2",
+  "password" : "testPass2",
+  "role" : "432"
 } ]

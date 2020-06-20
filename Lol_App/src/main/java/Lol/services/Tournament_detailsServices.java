@@ -15,8 +15,11 @@ import java.util.Objects;
 
 public class Tournament_detailsServices {
     private static List<Tournament_details> tour_details;
-    private static List<Tournament_details> delete_details = new ArrayList<Tournament_details>(1);
     private static final Path TOUR_PATH = FileSystemService.getPathToFile("config", "try_details.json");
+
+    public static Path getTourPath() {
+        return TOUR_PATH;
+    }
 
     public static void loadDetailsFromFile() throws IOException {
 
@@ -41,6 +44,7 @@ public class Tournament_detailsServices {
     }
     public static void delete_details(String tournament_name) throws IOException {
         loadDetailsFromFile();
+        List<Tournament_details> delete_details = new ArrayList<Tournament_details>();
         for(Tournament_details dd:tour_details)
         {
             if(!Objects.equals(dd.getName(),tournament_name))
@@ -56,8 +60,12 @@ public class Tournament_detailsServices {
         }
     }
 
+    public static List<Tournament_details> getTour_details() {
+        return tour_details;
+    }
+
     public static void main(String[] args) throws IOException {
         loadDetailsFromFile();
-        System.out.println(tour_details);
+        System.out.println( tour_details);
     }
 }

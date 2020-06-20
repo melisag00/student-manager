@@ -55,7 +55,8 @@ public class TournamentControllerTest extends JFrame {
         TournamentServices.delete("Tournament_test_delete");
         TournamentServices.loadUsersFromFile();
         assertEquals(i,TournamentServices.getTour().size());
-
     }
+
+
 
 }

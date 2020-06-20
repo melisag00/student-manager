@@ -67,6 +67,7 @@ public class TournamentServices {
     }
 
     public static void main(String[] args) throws IOException {
-
+          loadUsersFromFile();
+          System.out.println(tour);
     }
 }
