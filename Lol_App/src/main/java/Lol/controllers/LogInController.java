@@ -1,22 +1,56 @@
 package Lol.controllers;
 
 import Lol.View.LogInView;
-import Lol.exceptions.NoAnnoucementException;
-import Lol.exceptions.UsernameOrPasswordIncorrect;
-import Lol.exceptions.WrongRoleException;
+import Lol.exceptions.*;
 import Lol.services.CustomerServices;
 import Lol.services.ModeratorServices;
-import Lol.exceptions.NoPartnerException;
+
 import java.io.IOException;
 
 
 public class LogInController {
     private LogInView view;
+    private String name_test;
+    private String pass_test;
+    private String role_test;
+
+    public String getName_test() {
+        return name_test;
+    }
+
+    public void setName_test(String name_test) {
+        this.name_test = name_test;
+    }
+
+    public String getPass_test() {
+        return pass_test;
+    }
+
+    public void setPass_test(String pass_test) {
+        this.pass_test = pass_test;
+    }
+
+    public String getRole_test() {
+        return role_test;
+    }
+
+    public void setRole_test(String role_test) {
+        this.role_test = role_test;
+    }
+
+    public LogInController() {
+    }
 
     public LogInController(LogInView view) {
         this.view = view;
     }
-
+    public void handleRegisterAction() {
+        try {
+            ModeratorServices.checkPassAndAcc(name_test,pass_test);
+        } catch ( UsernameOrPasswordIncorrect | IOException e) {
+            System.out.println("You cant create the acc");
+        }
+    }
 
     public boolean checkAcc(String username, String password) {
         try {

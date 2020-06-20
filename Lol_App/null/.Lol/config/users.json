@@ -6,4 +6,8 @@
   "username" : "test2",
   "password" : "testPass2",
   "role" : "432"
+}, {
+  "username" : "Test-username",
+  "password" : "Test-password",
+  "role" : "customer"
 } ]

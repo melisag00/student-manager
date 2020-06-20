@@ -30,6 +30,19 @@ public class ModeratorServices {
     {
         return USERS_PATH;
     }
+
+    public static Path getUsersPath() {
+        return USERS_PATH;
+    }
+
+    public static List<annoucement> getAnn() {
+        return ann;
+    }
+
+    public static Path getAnnouce_Path() {
+        return Annouce_Path;
+    }
+
     public static void loadUsersFromFile() throws IOException {
 
         if (!Files.exists(USERS_PATH)) {
@@ -80,6 +93,24 @@ public class ModeratorServices {
      }
      if(ok == 0)
          throw new UsernameOrPasswordIncorrect(username);
+
+    }
+    public static void delete_annoucement(String annoucement)
+    {
+        List<annoucement> ann_delete = new ArrayList<annoucement>();
+        for(annoucement a:ann)
+        {
+            if(!Objects.equals(a.getAnnouce(),annoucement))
+            {
+                ann_delete.add(new annoucement(a.getAnnouce()));
+            }
+        }
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(Annouce_Path.toFile(), ann_delete);
+        } catch (IOException e) {
+            throw new CouldNotWriteTournamentException();
+        }
 
     }
 
@@ -172,6 +203,9 @@ public class ModeratorServices {
     }
 
     public static void main(String[] args) throws IOException {
+        loadUsersFromFile();
+        System.out.println(users);
+        setFileNull();
         loadUsersFromFile();
         System.out.println(users);
     }
