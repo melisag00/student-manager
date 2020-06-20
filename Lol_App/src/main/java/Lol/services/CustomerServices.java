@@ -17,7 +17,17 @@ import java.util.Objects;
 public class CustomerServices {
     private static List<customer> users;
     private static final Path USERS_PATH = FileSystemService.getPathToFile("config", "partner.json");
+
+    public static List<customer> getUsers() {
+        return users;
+    }
+
+    public static Path getUsersPath() {
+        return USERS_PATH;
+    }
+
     public static void loadUsersFromFile() throws IOException {
+
 
         if (!Files.exists(USERS_PATH)) {
             FileUtils.copyURLToFile(CustomerServices.class.getClassLoader().getResource("partner.json"), USERS_PATH.toFile());
@@ -30,19 +40,7 @@ public class CustomerServices {
     }
     public static void add(String username,String customer_role, String rank, String partner_role) throws IOException {
         loadUsersFromFile();
-        int ok = 1;
         List<customer> cust_delete = new ArrayList<customer>();
-        if(users == null)
-        {
-            cust_delete.add(new customer(username,customer_role,rank,partner_role));
-            try {
-                ObjectMapper objectMapper = new ObjectMapper();
-                objectMapper.writerWithDefaultPrettyPrinter().writeValue(USERS_PATH.toFile(), cust_delete);
-            } catch (IOException e) {
-                throw new CouldNotWriteUsersException();
-            }
-        }
-        else {
             for (customer c : users) {
                 if (!Objects.equals(c.getUsername(), username)) {
                     cust_delete.add(new customer(c.getUsername(), c.getCustomer_role(), c.getRank(), c.getPartner_role()));
@@ -55,9 +53,26 @@ public class CustomerServices {
             } catch (IOException e) {
                 throw new CouldNotWriteUsersException();
             }
-        }
-    }
 
+    }
+    public static void delete_customer(String name) throws IOException {
+        loadUsersFromFile();
+        List<customer> delete_cus = new ArrayList<customer>();
+        for(customer c:users)
+        {
+            if(!Objects.equals(name,c.getUsername()))
+            {
+                delete_cus.add(new customer(c.getUsername(),c.getCustomer_role(),c.getRank(),c.getPartner_role()));
+            }
+        }
+        try {
+            ObjectMapper objectMapper = new ObjectMapper();
+            objectMapper.writerWithDefaultPrettyPrinter().writeValue(USERS_PATH.toFile(), delete_cus);
+        } catch (IOException e) {
+            throw new CouldNotWriteUsersException();
+        }
+
+    }
 
     public static void Partner(String partner_role) throws IOException, NoPartnerException {
       loadUsersFromFile();

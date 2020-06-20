@@ -1,15 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ecade48b-95fc-4a4f-bc4e-3bd169d7525c" name="Default Changelist" comment="&#10;Added more tests for ParticipantController, Participant Service and Tournament details Service">
+    <list default="true" id="ecade48b-95fc-4a4f-bc4e-3bd169d7525c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lol/controllers/MessagesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lol/controllers/MessagesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Lol/services/MessagesServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lol/services/MessagesServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Lol/controllers/MessagesController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/controllers/MessagesController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Lol/controllers/ParticipantController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/controllers/ParticipantController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Lol/services/MessagesServices$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/services/MessagesServices$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Lol/services/MessagesServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/services/MessagesServices.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Lol/services/CustomerServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Lol/services/CustomerServices.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/services/CustomerServices$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/services/CustomerServices$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/services/CustomerServices$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/services/CustomerServices$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Lol/services/CustomerServices.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Lol/services/CustomerServices.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +116,20 @@
       <recent name="E:\Faculta\FIS\Lol_App\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MessagesServiceTest.testDeleteMessage">
+  <component name="RunManager" selected="JUnit.CustomerServiceTest.deleteCustomer">
+    <configuration name="CustomerServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Lol.services.CustomerServices" />
+      <module name="Lol_App" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lol.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LogInView" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Lol.View.LogInView" />
       <module name="Lol_App" />
@@ -133,44 +143,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MessagesServices" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Lol.services.MessagesServices" />
-      <module name="Lol_App" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Lol.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in Lol_App" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lol_App" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MessagesControllerTest.testHandleAddUserActionCode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Lol_App" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Lol.controllers.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Lol.controllers" />
-      <option name="MAIN_CLASS_NAME" value="Lol.controllers.MessagesControllerTest" />
-      <option name="METHOD_NAME" value="testHandleAddUserActionCode" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MessagesServiceTest.testAdd2Messages" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lol_App" />
       <extension name="coverage">
         <pattern>
@@ -179,14 +152,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Lol.services" />
-      <option name="MAIN_CLASS_NAME" value="Lol.services.MessagesServiceTest" />
-      <option name="METHOD_NAME" value="testAdd2Messages" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="Lol.services.CustomerServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MessagesServiceTest.testDeleteMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CustomerServiceTest.addOneCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Lol_App" />
       <extension name="coverage">
         <pattern>
@@ -195,8 +167,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Lol.services" />
-      <option name="MAIN_CLASS_NAME" value="Lol.services.MessagesServiceTest" />
-      <option name="METHOD_NAME" value="testDeleteMessage" />
+      <option name="MAIN_CLASS_NAME" value="Lol.services.CustomerServiceTest" />
+      <option name="METHOD_NAME" value="addOneCustomer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerServiceTest.deleteCustomer" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lol_App" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lol.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Lol.services" />
+      <option name="MAIN_CLASS_NAME" value="Lol.services.CustomerServiceTest" />
+      <option name="METHOD_NAME" value="deleteCustomer" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CustomerServiceTest.testLoadUsersFromFile" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Lol_App" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Lol.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Lol.services" />
+      <option name="MAIN_CLASS_NAME" value="Lol.services.CustomerServiceTest" />
+      <option name="METHOD_NAME" value="testLoadUsersFromFile" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -204,11 +208,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.MessagesServiceTest.testDeleteMessage" />
-        <item itemvalue="Application.MessagesServices" />
-        <item itemvalue="JUnit.MessagesServiceTest.testAdd2Messages" />
-        <item itemvalue="JUnit.All in Lol_App" />
-        <item itemvalue="JUnit.MessagesControllerTest.testHandleAddUserActionCode" />
+        <item itemvalue="JUnit.CustomerServiceTest.deleteCustomer" />
+        <item itemvalue="Application.CustomerServices" />
+        <item itemvalue="JUnit.CustomerServiceTest.addOneCustomer" />
+        <item itemvalue="JUnit.CustomerServiceTest.testLoadUsersFromFile" />
+        <item itemvalue="JUnit.CustomerServiceTest" />
       </list>
     </recent_temporary>
   </component>
@@ -391,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1592663631665</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Add tests for messages">
+      <created>1592668935439</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1592668935439</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -408,7 +419,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Added new packages and some empty classes" />
     <MESSAGE value="Implement a start graphic interface for register" />
     <MESSAGE value="Added new buttons for register and implement the verify of the password for moderator" />
     <MESSAGE value="Implement register for Customer and Moderator" />
@@ -433,7 +443,8 @@
     <MESSAGE value="Customers can see now details from tournaments" />
     <MESSAGE value="Added tests and tests dependencies and the next classes:RegistrationControllerTest, TournamentControllerTest and ModeratorServiceTest" />
     <MESSAGE value="&#10;Added more tests for ParticipantController, Participant Service and Tournament details Service" />
-    <option name="LAST_COMMIT_MESSAGE" value="&#10;Added more tests for ParticipantController, Participant Service and Tournament details Service" />
+    <MESSAGE value="Add tests for messages" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add tests for messages" />
   </component>
   <component name="WindowStateProjectService">
     <state x="620" y="104" key="#HTTP_Proxy" timestamp="1589458981722">
@@ -456,10 +467,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1592638153818" />
-    <state x="755" y="142" key="#com.intellij.ide.util.MemberChooser" timestamp="1592666908635">
+    <state x="755" y="142" key="#com.intellij.ide.util.MemberChooser" timestamp="1592668993447">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="755" y="142" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1592666908635" />
+    <state x="755" y="142" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1592668993447" />
     <state x="845" y="345" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1588684947576">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -476,10 +487,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="520" y="272" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1588694230504" />
-    <state x="245" y="89" width="1291" height="708" key="CommitChangelistDialog2" timestamp="1592663627839">
+    <state x="245" y="28" width="1291" height="708" key="CommitChangelistDialog2" timestamp="1592668931076">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="245" y="89" width="1291" height="708" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592663627839" />
+    <state x="245" y="28" width="1291" height="708" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1592668931076" />
     <state x="147" y="65" key="DiffContextDialog" timestamp="1591951636030">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -488,22 +499,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1589459180939" />
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1592668799881">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom" timestamp="1592669797654">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592668799881" />
-    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1592668799881">
+    <state width="1493" height="208" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1592669797654" />
+    <state width="1493" height="208" key="GridCell.Tab.0.center" timestamp="1592669797654">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592668799881" />
-    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1592668799881">
+    <state width="1493" height="208" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1592669797654" />
+    <state width="1493" height="208" key="GridCell.Tab.0.left" timestamp="1592669797654">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592668799881" />
-    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1592668799881">
+    <state width="1493" height="208" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1592669797654" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right" timestamp="1592669797654">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592668799881" />
+    <state width="1493" height="208" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1592669797654" />
     <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1592658846002">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
