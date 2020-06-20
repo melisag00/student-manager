@@ -52,19 +52,21 @@ public class TournamentServices {
                tour_delete.add(new Tournament(t.getName(),t.getDate()));
            }
        }
-       Tournament_detailsServices.delete_details(name);
-       ParticipantServices.delete_participants(name);
        try {
            ObjectMapper objectMapper = new ObjectMapper();
            objectMapper.writerWithDefaultPrettyPrinter().writeValue(USERS_PATH.toFile(), tour_delete);
        } catch (IOException e) {
            throw new CouldNotWriteTournamentException();
        }
-
+       Tournament_detailsServices.delete_details(name);
+       ParticipantServices.delete_participants(name);
    }
 
+    public static List<Tournament> getTour() {
+        return tour;
+    }
+
     public static void main(String[] args) throws IOException {
-        loadUsersFromFile();
-        System.out.println(tour);
+
     }
 }

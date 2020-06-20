@@ -8,9 +8,28 @@ import java.io.IOException;
 
 public class TournamentController{
     private LogInView view;
+    private String name_tournament_test;
+    private String date_tournament_test;
 
+    public TournamentController(){}
     public TournamentController(LogInView view) {
         this.view = view;
+    }
+
+    public String getName_tournament_test() {
+        return name_tournament_test;
+    }
+
+    public void setName_tournament_test(String name_tournament_test) {
+        this.name_tournament_test = name_tournament_test;
+    }
+
+    public String getDate_tournament_test() {
+        return date_tournament_test;
+    }
+
+    public void setDate_tournament_test(String date_tournament_test) {
+        this.date_tournament_test = date_tournament_test;
     }
 
     public boolean AddTournament(String name, String date) {

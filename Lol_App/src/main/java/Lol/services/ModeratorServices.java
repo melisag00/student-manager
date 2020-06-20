@@ -14,6 +14,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,10 +22,14 @@ public class ModeratorServices {
 
     private static List<moderator> users;
     private static final Path USERS_PATH = FileSystemService.getPathToFile("config", "users.json");
+    private static List<moderator> users_void = new ArrayList<moderator>();
     private static List<annoucement> ann;
     private static List<annoucement> ann_void;
     private static final Path Annouce_Path = FileSystemService.getPathToFile("congif","annouce.json");
-
+    public static Path getPath()
+    {
+        return USERS_PATH;
+    }
     public static void loadUsersFromFile() throws IOException {
 
         if (!Files.exists(USERS_PATH)) {
@@ -36,6 +41,7 @@ public class ModeratorServices {
         users = objectMapper.readValue(USERS_PATH.toFile(), new TypeReference<List<moderator>>() {
         });
     }
+
 
     public static void loadAnnoucementsFromFile() throws IOException{
         if(!Files.exists(Annouce_Path)){
@@ -52,7 +58,7 @@ public class ModeratorServices {
         persistUsers();
     }
 
-    private static void checkUserDoesNotAlreadyExist(String username) throws AccAlreadyExistException {
+    public static void checkUserDoesNotAlreadyExist(String username) throws AccAlreadyExistException {
         for (moderator user : users) {
             if (Objects.equals(username, user.getUsername()))
                 throw new AccAlreadyExistException(username);
@@ -134,6 +140,10 @@ public class ModeratorServices {
                         throw new CouldNotWriteTournamentException();
                     }
             }
+            public static void setFileNull()
+            {
+              users = new ArrayList<moderator>();
+            }
 
 
 
@@ -157,9 +167,14 @@ public class ModeratorServices {
         }
         return md;
     }
-
-    public static void main(String[] args) throws IOException, NoAnnoucementException {
-        loadAnnoucementsFromFile();
-        System.out.println(ann);
+    public static List<moderator> getUsers() {
+        return users;
     }
-}
+
+    public static void main(String[] args) throws IOException {
+        loadUsersFromFile();
+        System.out.println(users);
+    }
+
+
+    }
